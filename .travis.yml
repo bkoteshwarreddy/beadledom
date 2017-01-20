@@ -16,6 +16,12 @@ deploy:
   skip_cleanup: true
   on:
     repo: cerner/beadledom
+    branch: prove-it
+- provider: script
+  script: ".travis/publish.sh"
+  skip_cleanup: true
+  on:
+    repo: cerner/beadledom
     branch: master
 - provider: script
   script:
